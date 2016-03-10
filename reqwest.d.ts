@@ -1,6 +1,6 @@
-declare module "reqwest"
+declare module reqwest
 {
-    interface ReqwestOptions
+    export interface ReqwestOptions
     {
         url: string;
         method?: string;
@@ -15,7 +15,7 @@ declare module "reqwest"
         jsonpCallback?: string;
     }
 
-    interface ReqwestPromise<T>
+    export interface ReqwestPromise<T>
     {
         request: XMLHttpRequest;
 
@@ -26,7 +26,7 @@ declare module "reqwest"
         always(callback: (data: any) => void): void;
     }
 
-    interface ReqwestStatic
+    export interface ReqwestStatic
     {
         (url: string): ReqwestPromise<any>;
 
@@ -40,8 +40,8 @@ declare module "reqwest"
 
         <T>(options: ReqwestOptions): ReqwestPromise<T>;
     }
-    
-    var req: ReqwestStatic;
-    
-    export = req;
 }
+
+declare var req: reqwest.ReqwestStatic;
+
+export = req;
