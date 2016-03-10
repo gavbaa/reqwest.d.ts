@@ -1,6 +1,6 @@
-declare namespace __reqwest
+declare module "reqwest"
 {
-    export interface ReqwestOptions
+    interface ReqwestOptions
     {
         url: string;
         method?: string;
@@ -15,7 +15,7 @@ declare namespace __reqwest
         jsonpCallback?: string;
     }
 
-    export interface ReqwestPromise<T>
+    interface ReqwestPromise<T>
     {
         request: XMLHttpRequest;
 
@@ -26,7 +26,7 @@ declare namespace __reqwest
         always(callback: (data: any) => void): void;
     }
 
-    export interface ReqwestStatic
+    interface ReqwestStatic
     {
         (url: string): ReqwestPromise<any>;
 
@@ -40,4 +40,8 @@ declare namespace __reqwest
 
         <T>(options: ReqwestOptions): ReqwestPromise<T>;
     }
+    
+    var req: ReqwestStatic;
+    
+    export = req;
 }
