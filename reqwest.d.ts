@@ -41,10 +41,3 @@ declare namespace __reqwest
         <T>(options: ReqwestOptions): ReqwestPromise<T>;
     }
 }
-
-declare module "reqwest"
-{
-    var reqStatic: __reqwest.ReqwestStatic;
-    
-    export = reqStatic;
-}
