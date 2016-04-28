@@ -1,6 +1,6 @@
 {
     "name": "reqwest.d.ts",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Typescript/Typings definition for reqwest.",
     "main": "reqwest.d.ts",
     "scripts": {
