@@ -13,6 +13,7 @@ declare module Reqwest
         error?: (error: any) => void;
         complete?: (response: any) => void;
         jsonpCallback?: string;
+        async?: boolean;
     }
 
     interface ReqwestPromise<T>
